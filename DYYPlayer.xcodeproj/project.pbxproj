@@ -14,6 +14,7 @@
 		2F659E2A1F132BB400B4FCE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F659E291F132BB400B4FCE2 /* Assets.xcassets */; };
 		2F659E2D1F132BB400B4FCE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F659E2B1F132BB400B4FCE2 /* LaunchScreen.storyboard */; };
 		2F659E381F132BB400B4FCE2 /* DYYPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F659E371F132BB400B4FCE2 /* DYYPlayerUITests.m */; };
+		2F659E451F132FE100B4FCE2 /* DYYPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F659E441F132FE100B4FCE2 /* DYYPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		2F659E331F132BB400B4FCE2 /* DYYPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DYYPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F659E371F132BB400B4FCE2 /* DYYPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYYPlayerUITests.m; sourceTree = "<group>"; };
 		2F659E391F132BB400B4FCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F659E431F132FE100B4FCE2 /* DYYPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYYPlayer.h; sourceTree = "<group>"; };
+		2F659E441F132FE100B4FCE2 /* DYYPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYYPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		2F659E1C1F132BB400B4FCE2 /* DYYPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				2F659E421F132FCC00B4FCE2 /* DYYPlayer */,
 				2F659E201F132BB400B4FCE2 /* AppDelegate.h */,
 				2F659E211F132BB400B4FCE2 /* AppDelegate.m */,
 				2F659E231F132BB400B4FCE2 /* ViewController.h */,
@@ -109,6 +113,15 @@
 				2F659E391F132BB400B4FCE2 /* Info.plist */,
 			);
 			path = DYYPlayerUITests;
+			sourceTree = "<group>";
+		};
+		2F659E421F132FCC00B4FCE2 /* DYYPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				2F659E431F132FE100B4FCE2 /* DYYPlayer.h */,
+				2F659E441F132FE100B4FCE2 /* DYYPlayer.m */,
+			);
+			path = DYYPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F659E251F132BB400B4FCE2 /* ViewController.m in Sources */,
+				2F659E451F132FE100B4FCE2 /* DYYPlayer.m in Sources */,
 				2F659E221F132BB400B4FCE2 /* AppDelegate.m in Sources */,
 				2F659E1F1F132BB400B4FCE2 /* main.m in Sources */,
 			);
@@ -416,6 +430,7 @@
 				2F659E3E1F132BB400B4FCE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F659E3F1F132BB400B4FCE2 /* Build configuration list for PBXNativeTarget "DYYPlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +439,7 @@
 				2F659E411F132BB400B4FCE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
