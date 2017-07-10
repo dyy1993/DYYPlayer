@@ -106,6 +106,24 @@
                                     <action selector="volume:" destination="BYZ-38-t0r" eventType="valueChanged" id="0ZH-MV-cHB"/>
                                 </connections>
                             </slider>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="g74-7G-nGH">
+                                <rect key="frame" x="20" y="561" width="335" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="3os-yt-cXv"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zF-4v-Sy8">
+                                <rect key="frame" x="20" y="312" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxk-PA-kaD">
+                                <rect key="frame" x="313" y="312" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -114,11 +132,18 @@
                             <constraint firstItem="HBA-b1-cSg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Au3-Ik-izt"/>
                             <constraint firstItem="z9D-gC-VDv" firstAttribute="top" secondItem="K7u-50-WvB" secondAttribute="bottom" constant="40" id="DYe-AY-cMH"/>
                             <constraint firstItem="KkJ-cQ-lUQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DiE-DH-Yjh"/>
+                            <constraint firstAttribute="trailing" secondItem="jxk-PA-kaD" secondAttribute="trailing" constant="20" id="F3Q-JF-vZr"/>
+                            <constraint firstItem="z9D-gC-VDv" firstAttribute="top" secondItem="jxk-PA-kaD" secondAttribute="bottom" constant="3" id="Isz-U1-B62"/>
                             <constraint firstItem="Ony-IH-Ooo" firstAttribute="top" secondItem="7fn-2W-bfU" secondAttribute="bottom" constant="20" id="Jdu-bY-vbX"/>
+                            <constraint firstAttribute="trailing" secondItem="g74-7G-nGH" secondAttribute="trailing" constant="20" id="K7B-FI-Lng"/>
                             <constraint firstItem="HBA-b1-cSg" firstAttribute="top" secondItem="ji4-Sl-xSO" secondAttribute="bottom" constant="10" id="Mmo-O7-K5W"/>
                             <constraint firstAttribute="trailing" secondItem="z9D-gC-VDv" secondAttribute="trailing" constant="20" id="NN3-NW-FjN"/>
+                            <constraint firstItem="g74-7G-nGH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="NV9-KZ-VqR"/>
+                            <constraint firstItem="3zF-4v-Sy8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="OAt-Fp-nBz"/>
                             <constraint firstItem="K7u-50-WvB" firstAttribute="top" secondItem="Ony-IH-Ooo" secondAttribute="bottom" constant="29" id="YK0-0c-FkF"/>
+                            <constraint firstItem="z9D-gC-VDv" firstAttribute="top" secondItem="3zF-4v-Sy8" secondAttribute="bottom" constant="3" id="Ym5-by-SZh"/>
                             <constraint firstAttribute="trailing" secondItem="HBA-b1-cSg" secondAttribute="trailing" constant="20" id="bFU-v7-DFx"/>
+                            <constraint firstItem="g74-7G-nGH" firstAttribute="top" secondItem="HBA-b1-cSg" secondAttribute="bottom" constant="45" id="f2T-SN-KUh"/>
                             <constraint firstItem="KkJ-cQ-lUQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="87" id="hnR-6Y-eBH"/>
                             <constraint firstItem="Ony-IH-Ooo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iPP-5z-EP1"/>
                             <constraint firstItem="ji4-Sl-xSO" firstAttribute="top" secondItem="CqX-5S-Hf2" secondAttribute="bottom" constant="24" id="lcG-zx-OD9"/>
@@ -129,6 +154,14 @@
                             <constraint firstItem="CqX-5S-Hf2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wiK-fI-M06"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTime" destination="3zF-4v-Sy8" id="yW1-Ke-KC9"/>
+                        <outlet property="loadDataProgress" destination="g74-7G-nGH" id="e4m-aF-mAY"/>
+                        <outlet property="muteBtn" destination="ji4-Sl-xSO" id="bBl-FB-Z57"/>
+                        <outlet property="progress" destination="z9D-gC-VDv" id="Ep8-kc-bcp"/>
+                        <outlet property="totalTime" destination="jxk-PA-kaD" id="SYz-21-k5f"/>
+                        <outlet property="volumProgress" destination="HBA-b1-cSg" id="S9f-pG-F4k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

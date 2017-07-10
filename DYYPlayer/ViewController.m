@@ -9,14 +9,43 @@
 #import "ViewController.h"
 #import "DYYPlayer.h"
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *currentTime;
+@property (weak, nonatomic) IBOutlet UILabel *totalTime;
+@property (weak, nonatomic) IBOutlet UISlider *progress;
 
+@property (weak, nonatomic) IBOutlet UIButton *muteBtn;
+@property (weak, nonatomic) IBOutlet UISlider *volumProgress;
+@property (weak, nonatomic) IBOutlet UIProgressView *loadDataProgress;
+
+@property (weak, nonatomic) NSTimer *timer;
 @end
 
 @implementation ViewController
+-(NSTimer *)timer{
+
+    if (!_timer) {
+        NSTimer *timer = [NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(updata) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+        _timer = timer;
+    }
+    return _timer;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self timer];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (void)updata{
+    NSLog(@"%zd",[DYYPlayer sharePlayer].state);
+    
+    self.currentTime.text = [DYYPlayer sharePlayer].currentTimeFormat;
+    self.totalTime.text = [DYYPlayer sharePlayer].totalTimeFormat;
+    self.progress.value = [DYYPlayer sharePlayer].progress;
+    self.muteBtn.selected = [DYYPlayer sharePlayer].muted;
+    self.volumProgress.value = [DYYPlayer sharePlayer].volume;
+    self.loadDataProgress.progress = [DYYPlayer sharePlayer].loadDataProgress;
+
 }
 
 - (IBAction)play:(id)sender {
@@ -45,7 +74,7 @@
 }
 - (IBAction)mute:(UIButton *)sender {
     sender.selected = !sender.selected;
-    [[DYYPlayer sharePlayer] setMute:sender.selected];
+    [DYYPlayer sharePlayer].muted = sender.selected;
 }
 - (IBAction)volume:(UISlider *)sender {
     [[DYYPlayer  sharePlayer] setVolume:sender.value];
