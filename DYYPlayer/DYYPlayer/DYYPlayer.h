@@ -18,15 +18,14 @@ typedef NS_ENUM(NSUInteger, DYYPlayerState) {
 @interface DYYPlayer : NSObject
 + (instancetype)sharePlayer;
 
-- (void)playWithUrl:(NSURL *)url;
+- (void)playWithUrl:(NSURL *)url isCache:(BOOL)isCache;
 - (void)pause;
 - (void)resume;
 - (void)stop;
 - (void)seekWithProgress:(float)progress;
 - (void)seekWithTimeDiffer:(float)timeDiffer;
-//- (void)setRate:(float)rate;
-//- (void)setMute:(BOOL)mute;
-//- (void)setVolume:(float)volume;
+
+
 @property (nonatomic, assign)float volume;
 @property (nonatomic, assign)BOOL muted;
 @property (nonatomic, assign)float rate;

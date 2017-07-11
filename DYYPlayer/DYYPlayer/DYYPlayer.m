@@ -8,10 +8,13 @@
 
 #import "DYYPlayer.h"
 #import <AVFoundation/AVFoundation.h>
+#import "DYYResourceLoaderDelegate.h"
+#import "NSURL+Streaming.h"
 @interface DYYPlayer(){
     BOOL _isUserPause;
 }
 @property (nonatomic, strong)AVPlayer *player;
+@property (nonatomic, strong)DYYResourceLoaderDelegate *resourceLoaderDelegate;
 @end
 @implementation DYYPlayer
 static DYYPlayer *_sharePlayer;
@@ -30,18 +33,25 @@ static DYYPlayer *_sharePlayer;
     return _sharePlayer;
 }
 
-- (void)playWithUrl:(NSURL *)url{
+- (void)playWithUrl:(NSURL *)url isCache:(BOOL)isCache{
     
     if ([url isEqual:((AVURLAsset *)self.player.currentItem.asset).URL]) {
         [self resume];
         return;
     }
-   
-    _currentRrl = url;
-    AVURLAsset *asset = [AVURLAsset assetWithURL:url];
     if (self.player.currentItem) {
         [self removeObserver];
     }
+    _currentRrl = url;
+    if (isCache) {
+         url = [url streamingUrl];
+    }
+    AVURLAsset *asset = [AVURLAsset assetWithURL:url];
+    //拦截资源请求 缓存数据
+    self.resourceLoaderDelegate = [[DYYResourceLoaderDelegate alloc] init];
+    [asset.resourceLoader setDelegate:self.resourceLoaderDelegate queue:dispatch_get_main_queue()];
+    
+   
     AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:asset];
     self.player = [AVPlayer playerWithPlayerItem:playerItem];
     

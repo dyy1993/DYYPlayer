@@ -50,7 +50,7 @@
 
 - (IBAction)play:(id)sender {
     NSURL *url = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/videos/minion_01.mp4"];
-    [[DYYPlayer sharePlayer] playWithUrl:url];
+    [[DYYPlayer sharePlayer] playWithUrl:url isCache:YES];
 }
 - (IBAction)pauseOrContinue:(UIButton *)sender {
     sender.selected = !sender.selected;
