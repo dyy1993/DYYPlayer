@@ -16,7 +16,9 @@
 		2F659E381F132BB400B4FCE2 /* DYYPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F659E371F132BB400B4FCE2 /* DYYPlayerUITests.m */; };
 		2F659E451F132FE100B4FCE2 /* DYYPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F659E441F132FE100B4FCE2 /* DYYPlayer.m */; };
 		2F659E481F13889200B4FCE2 /* DYYResourceLoaderDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F659E471F13889200B4FCE2 /* DYYResourceLoaderDelegate.m */; };
-		2F659E4B1F138A3E00B4FCE2 /* NSURL+Streaming.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F659E4A1F138A3E00B4FCE2 /* NSURL+Streaming.m */; };
+		2F659E4B1F138A3E00B4FCE2 /* NSURL+Agreement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F659E4A1F138A3E00B4FCE2 /* NSURL+Agreement.m */; };
+		2F659E4E1F14A52F00B4FCE2 /* DYYPlayerFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F659E4D1F14A52F00B4FCE2 /* DYYPlayerFile.m */; };
+		2F659E511F14AE8900B4FCE2 /* DYYPlayerDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F659E501F14AE8900B4FCE2 /* DYYPlayerDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +49,12 @@
 		2F659E441F132FE100B4FCE2 /* DYYPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYYPlayer.m; sourceTree = "<group>"; };
 		2F659E461F13889200B4FCE2 /* DYYResourceLoaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYYResourceLoaderDelegate.h; sourceTree = "<group>"; };
 		2F659E471F13889200B4FCE2 /* DYYResourceLoaderDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYYResourceLoaderDelegate.m; sourceTree = "<group>"; };
-		2F659E491F138A3E00B4FCE2 /* NSURL+Streaming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Streaming.h"; sourceTree = "<group>"; };
-		2F659E4A1F138A3E00B4FCE2 /* NSURL+Streaming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Streaming.m"; sourceTree = "<group>"; };
+		2F659E491F138A3E00B4FCE2 /* NSURL+Agreement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Agreement.h"; sourceTree = "<group>"; };
+		2F659E4A1F138A3E00B4FCE2 /* NSURL+Agreement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Agreement.m"; sourceTree = "<group>"; };
+		2F659E4C1F14A52F00B4FCE2 /* DYYPlayerFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYYPlayerFile.h; sourceTree = "<group>"; };
+		2F659E4D1F14A52F00B4FCE2 /* DYYPlayerFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYYPlayerFile.m; sourceTree = "<group>"; };
+		2F659E4F1F14AE8900B4FCE2 /* DYYPlayerDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYYPlayerDownloader.h; sourceTree = "<group>"; };
+		2F659E501F14AE8900B4FCE2 /* DYYPlayerDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYYPlayerDownloader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +134,12 @@
 				2F659E441F132FE100B4FCE2 /* DYYPlayer.m */,
 				2F659E461F13889200B4FCE2 /* DYYResourceLoaderDelegate.h */,
 				2F659E471F13889200B4FCE2 /* DYYResourceLoaderDelegate.m */,
-				2F659E491F138A3E00B4FCE2 /* NSURL+Streaming.h */,
-				2F659E4A1F138A3E00B4FCE2 /* NSURL+Streaming.m */,
+				2F659E491F138A3E00B4FCE2 /* NSURL+Agreement.h */,
+				2F659E4A1F138A3E00B4FCE2 /* NSURL+Agreement.m */,
+				2F659E4C1F14A52F00B4FCE2 /* DYYPlayerFile.h */,
+				2F659E4D1F14A52F00B4FCE2 /* DYYPlayerFile.m */,
+				2F659E4F1F14AE8900B4FCE2 /* DYYPlayerDownloader.h */,
+				2F659E501F14AE8900B4FCE2 /* DYYPlayerDownloader.m */,
 			);
 			path = DYYPlayer;
 			sourceTree = "<group>";
@@ -239,7 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F659E251F132BB400B4FCE2 /* ViewController.m in Sources */,
-				2F659E4B1F138A3E00B4FCE2 /* NSURL+Streaming.m in Sources */,
+				2F659E4E1F14A52F00B4FCE2 /* DYYPlayerFile.m in Sources */,
+				2F659E511F14AE8900B4FCE2 /* DYYPlayerDownloader.m in Sources */,
+				2F659E4B1F138A3E00B4FCE2 /* NSURL+Agreement.m in Sources */,
 				2F659E451F132FE100B4FCE2 /* DYYPlayer.m in Sources */,
 				2F659E481F13889200B4FCE2 /* DYYResourceLoaderDelegate.m in Sources */,
 				2F659E221F132BB400B4FCE2 /* AppDelegate.m in Sources */,

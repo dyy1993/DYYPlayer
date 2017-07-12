@@ -6,12 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -21,8 +23,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Orb-UX-qBV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                                <color key="backgroundColor" red="1" green="0.47765280729999998" blue="0.55170428709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Orb-UX-qBV" secondAttribute="height" multiplier="16:9" id="cnw-NQ-7TL"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkJ-cQ-lUQ">
-                                <rect key="frame" x="164" y="107" width="46" height="30"/>
+                                <rect key="frame" x="164" y="278" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="fOV-XE-crS"/>
                                     <constraint firstAttribute="height" constant="30" id="gMS-Rn-PuH"/>
@@ -33,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fn-2W-bfU">
-                                <rect key="frame" x="164.5" y="157" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="328" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9nl-of-xun"/>
                                     <constraint firstAttribute="width" constant="46" id="G1K-YJ-oXl"/>
@@ -45,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ony-IH-Ooo">
-                                <rect key="frame" x="164.5" y="207" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="378" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GXx-NU-Sn8"/>
                                     <constraint firstAttribute="width" constant="46" id="xWH-AN-PhG"/>
@@ -56,7 +65,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7u-50-WvB">
-                                <rect key="frame" x="147.5" y="266" width="80" height="30"/>
+                                <rect key="frame" x="147.5" y="437" width="80" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="89W-ok-NaB"/>
                                     <constraint firstAttribute="height" constant="30" id="rjg-Fm-Hzw"/>
@@ -67,7 +76,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="z9D-gC-VDv">
-                                <rect key="frame" x="18" y="336" width="339" height="31"/>
+                                <rect key="frame" x="18" y="236" width="339" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Bur-6g-tRa"/>
                                 </constraints>
@@ -76,7 +85,7 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqX-5S-Hf2">
-                                <rect key="frame" x="164.5" y="392" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="473" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="PJA-qJ-GGv"/>
                                     <constraint firstAttribute="height" constant="30" id="sVb-kO-KLd"/>
@@ -87,7 +96,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji4-Sl-xSO">
-                                <rect key="frame" x="164.5" y="446" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="527" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="0Vh-bv-mS5"/>
                                     <constraint firstAttribute="height" constant="30" id="ISB-0V-oT3"/>
@@ -98,7 +107,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HBA-b1-cSg">
-                                <rect key="frame" x="18" y="486" width="339" height="31"/>
+                                <rect key="frame" x="18" y="567" width="339" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Fd8-HW-Ivc"/>
                                 </constraints>
@@ -107,19 +116,19 @@
                                 </connections>
                             </slider>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="g74-7G-nGH">
-                                <rect key="frame" x="20" y="561" width="335" height="2"/>
+                                <rect key="frame" x="20" y="271" width="335" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="3os-yt-cXv"/>
                                 </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zF-4v-Sy8">
-                                <rect key="frame" x="20" y="312" width="42" height="21"/>
+                                <rect key="frame" x="20" y="212" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxk-PA-kaD">
-                                <rect key="frame" x="313" y="312" width="42" height="21"/>
+                                <rect key="frame" x="313" y="212" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -128,11 +137,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="z9D-gC-VDv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="34M-5R-Yd0"/>
+                            <constraint firstItem="CqX-5S-Hf2" firstAttribute="top" secondItem="K7u-50-WvB" secondAttribute="bottom" constant="6" id="4wa-lf-8a6"/>
                             <constraint firstItem="ji4-Sl-xSO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7cQ-6p-Gvf"/>
+                            <constraint firstItem="z9D-gC-VDv" firstAttribute="top" secondItem="Orb-UX-qBV" secondAttribute="bottom" constant="25" id="9bf-E2-KJ6"/>
                             <constraint firstItem="HBA-b1-cSg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Au3-Ik-izt"/>
-                            <constraint firstItem="z9D-gC-VDv" firstAttribute="top" secondItem="K7u-50-WvB" secondAttribute="bottom" constant="40" id="DYe-AY-cMH"/>
+                            <constraint firstAttribute="trailing" secondItem="Orb-UX-qBV" secondAttribute="trailing" id="DSB-9I-55h"/>
+                            <constraint firstItem="Orb-UX-qBV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DW4-y8-wQs"/>
                             <constraint firstItem="KkJ-cQ-lUQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DiE-DH-Yjh"/>
                             <constraint firstAttribute="trailing" secondItem="jxk-PA-kaD" secondAttribute="trailing" constant="20" id="F3Q-JF-vZr"/>
+                            <constraint firstItem="Orb-UX-qBV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FGa-Cy-Mo0"/>
+                            <constraint firstItem="g74-7G-nGH" firstAttribute="top" secondItem="z9D-gC-VDv" secondAttribute="bottom" constant="5" id="I0h-dj-m04"/>
                             <constraint firstItem="z9D-gC-VDv" firstAttribute="top" secondItem="jxk-PA-kaD" secondAttribute="bottom" constant="3" id="Isz-U1-B62"/>
                             <constraint firstItem="Ony-IH-Ooo" firstAttribute="top" secondItem="7fn-2W-bfU" secondAttribute="bottom" constant="20" id="Jdu-bY-vbX"/>
                             <constraint firstAttribute="trailing" secondItem="g74-7G-nGH" secondAttribute="trailing" constant="20" id="K7B-FI-Lng"/>
@@ -140,15 +154,13 @@
                             <constraint firstAttribute="trailing" secondItem="z9D-gC-VDv" secondAttribute="trailing" constant="20" id="NN3-NW-FjN"/>
                             <constraint firstItem="g74-7G-nGH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="NV9-KZ-VqR"/>
                             <constraint firstItem="3zF-4v-Sy8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="OAt-Fp-nBz"/>
+                            <constraint firstItem="KkJ-cQ-lUQ" firstAttribute="top" secondItem="g74-7G-nGH" secondAttribute="bottom" constant="5" id="SOb-4B-OfN"/>
                             <constraint firstItem="K7u-50-WvB" firstAttribute="top" secondItem="Ony-IH-Ooo" secondAttribute="bottom" constant="29" id="YK0-0c-FkF"/>
                             <constraint firstItem="z9D-gC-VDv" firstAttribute="top" secondItem="3zF-4v-Sy8" secondAttribute="bottom" constant="3" id="Ym5-by-SZh"/>
                             <constraint firstAttribute="trailing" secondItem="HBA-b1-cSg" secondAttribute="trailing" constant="20" id="bFU-v7-DFx"/>
-                            <constraint firstItem="g74-7G-nGH" firstAttribute="top" secondItem="HBA-b1-cSg" secondAttribute="bottom" constant="45" id="f2T-SN-KUh"/>
-                            <constraint firstItem="KkJ-cQ-lUQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="87" id="hnR-6Y-eBH"/>
                             <constraint firstItem="Ony-IH-Ooo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iPP-5z-EP1"/>
                             <constraint firstItem="ji4-Sl-xSO" firstAttribute="top" secondItem="CqX-5S-Hf2" secondAttribute="bottom" constant="24" id="lcG-zx-OD9"/>
                             <constraint firstItem="7fn-2W-bfU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ldd-T9-IH5"/>
-                            <constraint firstItem="CqX-5S-Hf2" firstAttribute="top" secondItem="z9D-gC-VDv" secondAttribute="bottom" constant="26" id="qCE-qO-WeQ"/>
                             <constraint firstItem="7fn-2W-bfU" firstAttribute="top" secondItem="KkJ-cQ-lUQ" secondAttribute="bottom" constant="20" id="vOk-9u-7ot"/>
                             <constraint firstItem="K7u-50-WvB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wF2-9K-xzT"/>
                             <constraint firstItem="CqX-5S-Hf2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wiK-fI-M06"/>
@@ -158,12 +170,12 @@
                         <outlet property="currentTime" destination="3zF-4v-Sy8" id="yW1-Ke-KC9"/>
                         <outlet property="loadDataProgress" destination="g74-7G-nGH" id="e4m-aF-mAY"/>
                         <outlet property="muteBtn" destination="ji4-Sl-xSO" id="bBl-FB-Z57"/>
+                        <outlet property="playerView" destination="Orb-UX-qBV" id="TC0-kh-BFE"/>
                         <outlet property="progress" destination="z9D-gC-VDv" id="Ep8-kc-bcp"/>
                         <outlet property="totalTime" destination="jxk-PA-kaD" id="SYz-21-k5f"/>
                         <outlet property="volumProgress" destination="HBA-b1-cSg" id="S9f-pG-F4k"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>

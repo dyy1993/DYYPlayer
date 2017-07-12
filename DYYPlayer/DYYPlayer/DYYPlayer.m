@@ -7,13 +7,11 @@
 //
 
 #import "DYYPlayer.h"
-#import <AVFoundation/AVFoundation.h>
 #import "DYYResourceLoaderDelegate.h"
-#import "NSURL+Streaming.h"
+#import "NSURL+Agreement.h"
 @interface DYYPlayer(){
     BOOL _isUserPause;
 }
-@property (nonatomic, strong)AVPlayer *player;
 @property (nonatomic, strong)DYYResourceLoaderDelegate *resourceLoaderDelegate;
 @end
 @implementation DYYPlayer
@@ -35,10 +33,13 @@ static DYYPlayer *_sharePlayer;
 
 - (void)playWithUrl:(NSURL *)url isCache:(BOOL)isCache{
     
-    if ([url isEqual:((AVURLAsset *)self.player.currentItem.asset).URL]) {
+    NSURL *currentURL = [(AVURLAsset *)self.player.currentItem.asset URL];
+    if ([url isEqual:currentURL] || [[url streamingUrl] isEqual:currentURL]) {
+        NSLog(@"当前播放任务已经存在");
         [self resume];
         return;
     }
+   
     if (self.player.currentItem) {
         [self removeObserver];
     }

@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+
 typedef NS_ENUM(NSUInteger, DYYPlayerState) {
     DYYPlayerStateUnknow,
     DYYPlayerStatePlaying,
@@ -41,5 +43,6 @@ typedef NS_ENUM(NSUInteger, DYYPlayerState) {
 
 @property (nonatomic, assign, readonly)DYYPlayerState state;
 
+@property (nonatomic, strong)AVPlayer *player;
 
 @end

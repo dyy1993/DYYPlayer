@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *loadDataProgress;
 
 @property (weak, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) AVPlayerLayer *playerLayer;
+@property (weak, nonatomic) IBOutlet UIView *playerView;
+
 @end
 
 @implementation ViewController
@@ -34,10 +37,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self timer];
-    // Do any additional setup after loading the view, typically from a nib.
+      // Do any additional setup after loading the view, typically from a nib.
+}
+-(void)viewWillAppear:(BOOL)animated{
+
+    [super viewWillAppear:animated];
+
+}
+-(void)viewDidAppear:(BOOL)animated{
+
+    [super viewDidAppear:animated];
+    
+    self.playerLayer = [[AVPlayerLayer alloc] init];
+    self.playerLayer.frame = self.playerView.bounds;
+    [self.playerView.layer addSublayer:self.playerLayer];
+    self.playerLayer.videoGravity=AVLayerVideoGravityResizeAspect;
 }
 - (void)updata{
-    NSLog(@"%zd",[DYYPlayer sharePlayer].state);
+//    NSLog(@"%zd",[DYYPlayer sharePlayer].state);
     
     self.currentTime.text = [DYYPlayer sharePlayer].currentTimeFormat;
     self.totalTime.text = [DYYPlayer sharePlayer].totalTimeFormat;
@@ -51,6 +68,8 @@
 - (IBAction)play:(id)sender {
     NSURL *url = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/videos/minion_01.mp4"];
     [[DYYPlayer sharePlayer] playWithUrl:url isCache:YES];
+    self.playerLayer.player = [DYYPlayer sharePlayer].player;
+    
 }
 - (IBAction)pauseOrContinue:(UIButton *)sender {
     sender.selected = !sender.selected;

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSURL (Streaming)
+@interface NSURL (Agreement)
 - (NSURL *)streamingUrl;
+- (NSURL *)httpUrl;
 @end
