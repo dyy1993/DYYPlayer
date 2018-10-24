@@ -66,8 +66,8 @@
 }
 
 - (IBAction)play:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/videos/minion_01.mp4"];
-    [[DYYPlayer sharePlayer] playWithUrl:url isCache:YES];
+    NSURL *url = [NSURL URLWithString:@"http://tb-video.bdstatic.com/videocp/12045395_f9f87b84aaf4ff1fee62742f2d39687f.mp4"];
+    [[DYYPlayer sharePlayer] playWithUrl:url isCache:NO];
     self.playerLayer.player = [DYYPlayer sharePlayer].player;
     
 }
